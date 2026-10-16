@@ -1,27 +1,70 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Регистрация</title>
-    <link rel="stylesheet" href="./styles/style.css" />
-  </head>
-  <body>
-    <main class="page">
-      <h1>Регистрация на прогулку</h1>
-      <form class="form" action="#" method="post">
-        <!-- TODO fieldset/legend -->
-        <div class="form__field">
-          <label>Имя</label><input type="text" placeholder="Введите имя" />
-        </div>
-        <div class="form__field">
-          <label>Email</label
-          ><input type="text" placeholder="name@example.com" />
-        </div>
-        <!-- TODO radio, checkbox, select, textarea --><button type="submit">
-          Записаться
-        </button>
-      </form>
-    </main>
-  </body>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>Регистрация</title>
+<link rel="stylesheet" href="./styles/style.css" />
+</head>
+<body>
+<main class="page">
+<h1>Регистрация на прогулку</h1>
+<form class="form" action="#" method="post">
+<fieldset>
+<legend>Личные данные</legend>
+<div class="form__field">
+<label desert for="user-name">Имя</label>
+<input id="user-name" name="username" type="text" placeholder="Введите имя" required />
+</div>
+<div class="form__field">
+<label for="user-email">Email</label>
+<input id="user-email" name="email" type="email" placeholder="name@example.com" required />
+</div>
+<div class="form__field">
+<label for="user-phone">Телефон</label>
+<input id="user-phone" name="phone" type="tel" placeholder="+7 (999) 999-99-99" required />
+</div>
+</fieldset>
+<fieldset>
+<legend>Параметры прогулки</legend>
+<div class="form__field">
+<label for="tour-date">Дата прогулки</label>
+<input id="tour-date" name="tour_date" type="date" required />
+</div>
+<div class="form__field">
+<label desert for="tour-route">Выберите маршрут</label>
+<select id="tour-route" name="route" required>
+<option value="" disabled selected>Маршрут не выбран</option>
+<option value="center">Исторический центр</option>
+<option value="parks">Парки и набережные</option>
+<option value="roofs">Прогулка по крышам</option>
+</select>
+</div>
+<div class="form__field">
+<span>Удобное время:</span>
+<div class="form__radio-group">
+<input id="time-morning" name="tour_time" type="radio" value="morning" checked />
+<label for="time-morning">Утро (10:00)</label>
+</div>
+<div class="form__radio-group">
+<input id="time-evening" name="tour_time" type="radio" value="evening" />
+<label for="time-evening">Вечер (18:00)</label>
+</div>
+</div>
+</fieldset>
+<fieldset>
+<legend>Дополнительно</legend>
+<div class="form__field">
+<label for="user-comment">Комментарий или пожелания</label>
+<textarea id="user-comment" name="comment" rows="4" placeholder="Напишите ваши пожелания к прогулке..."></textarea>
+</div>
+<div class="form__checkbox-group">
+<input id="user-agreement" name="agreement" type="checkbox" value="yes" required />
+<label for="user-agreement">Я согласен с условиями бронирования и обработки данных</label>
+</div>
+</fieldset>
+<button type="submit">Записаться</button>
+</form>
+</main>
+</body>
 </html>

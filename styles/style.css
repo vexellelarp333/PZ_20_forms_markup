@@ -1,6 +1,65 @@
-* , *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; min-width: 320px; font-family: Arial, sans-serif; color: #171717; background: #f5f4ef; }
-a { color: inherit; }
-button, input, textarea, select { font: inherit; }
-body{padding:48px}.page{max-width:720px;margin:0 auto}.form{display:grid;gap:24px;margin-top:32px;padding:32px;background:#fff}.form__field{display:grid;gap:8px}input,textarea,select,button{min-height:48px;padding:12px}button{border:0;background:#171717;color:#fff;cursor:pointer}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    font-family: Arial, sans-serif;
+    color: #171717;
+    background: #f5f4ef;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+body {
+    padding: 48px
+}
+
+.page {
+    max-width: 720px;
+    margin: 0 auto
+}
+
+.form {
+    display: grid;
+    gap: 24px;
+    margin-top: 32px;
+    padding: 32px;
+    background: #fff
+}
+
+.form__field {
+    display: grid;
+    gap: 8px
+}
+
+input,
+textarea,
+select,
+button {
+    min-height: 48px;
+    padding: 12px
+}
+
+button {
+    border: 0;
+    background: #171717;
+    color: #fff;
+    cursor: pointer
+}
